@@ -9,7 +9,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <div clasname="App">
+      <div className="App">
         <Calculator />
       </div>
     );

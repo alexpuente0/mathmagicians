@@ -1,47 +1,93 @@
 import React from 'react';
+import calculate from '../logic/calculate';
+import Button from './button';
 
 export default class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      calc: {},
+    };
+    this.operatorsR = ['÷', 'x', '-', '+', '='];
+    this.operatorsM = ['AC', '+/-', '%'];
+    this.handleClick = this.handleClick.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({
+      calc: {
+        total: null,
+        next: null,
+        operation: null,
+      },
+    });
+  }
+
+  handleClick(buttonName) {
+    this.setState((state) => ({
+      calc: calculate(state.calc, buttonName),
+    }));
+  }
+
+  createNum() {
+    this.input = [];
+
+    for (let i = 9; i > -1; i -= 1) {
+      this.input.push(
+        <Button
+          key={`${i}`}
+          classN="btn num_btn"
+          value={`${i}`}
+          handleClick={this.handleClick}
+        />,
+      );
+    }
+    return this.input;
+  }
+
+  createOperations(operations) {
+    this.operationsContainer = [];
+    operations.forEach((operation) => {
+      this.operationsContainer.push(
+        <Button
+          key={operation}
+          classN="btn op_btn"
+          value={operation}
+          handleClick={this.handleClick}
+        />,
+      );
+    });
+    return this.operationsContainer;
   }
 
   render() {
+    const { calc } = this.state;
+    const { total, next } = calc;
     return (
       <div className="calculator">
         <div className="calc_display">
-          <span className="calc_temp">(0)</span>
-          <span className="calc_value"> 0 </span>
+          <span className="calc_value">
+            {' '}
+            {next || total || '0'}
+          </span>
         </div>
 
         <div className="calc_keys">
           <div className="operators rSide">
-            <button type="button" className="btn op_btn"> ÷ </button>
-            <button type="button" className="btn op_btn"> x </button>
-            <button type="button" className="btn op_btn"> - </button>
-            <button type="button" className="btn op_btn"> + </button>
-            <button type="button" className="btn op_btn"> = </button>
+            {this.createOperations(this.operatorsR)}
           </div>
 
           <div className="operators modif">
-            <button type="button" className="btn mod_btn"> AC </button>
-            <button type="button" className="btn mod_btn"> +/- </button>
-            <button type="button" className="btn mod_btn"> % </button>
+            {this.createOperations(this.operatorsM)}
           </div>
 
           <div className="numbers">
-
-            <button type="button" className="btn num_btn"> 1 </button>
-            <button type="button" className="btn num_btn"> 2 </button>
-            <button type="button" className="btn num_btn"> 3 </button>
-            <button type="button" className="btn num_btn"> 4 </button>
-            <button type="button" className="btn num_btn"> 5 </button>
-            <button type="button" className="btn num_btn"> 6 </button>
-            <button type="button" className="btn num_btn"> 7 </button>
-            <button type="button" className="btn num_btn"> 8 </button>
-            <button type="button" className="btn num_btn"> 9 </button>
-            <button type="button" className="btn num_btn"> 0 </button>
-            <button type="button" className="btn mod_btn"> . </button>
+            {this.createNum()}
+            <Button
+              classN="btn num_btn"
+              value="."
+              handleClick={this.handleClick}
+            />
           </div>
         </div>
       </div>
