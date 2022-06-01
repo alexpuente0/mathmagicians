@@ -2,7 +2,7 @@
 
 # Math Magicians
 
-> This project its a Single Page Application which includes a homepage, a calculator and a math-related quote.
+> This project its a Single Page Application which includes a homepage, an interactive calculator and a math-related quote.
 
 ## Built With
 
@@ -11,6 +11,21 @@
 ## Getting Started
 
 In this project are creating a SPA using React
+
+## Installation
+
+1 - Clone the repository
+(you must have [Git Installed](https://github.com/git-guides/install-git)) using the following line of code:
+
+`git clone git@github.com:alexpuente0/mathmagicians`
+
+2 - Enther the Repository folder you created (`mathmagicians`) using `cd mathmagicians` in the command line
+
+3 - Type `code .` in the command line to open the project in Visual Studio Code
+
+4 - Install the dependencies necesarry to run the project using `npm install`
+
+5 - Finally, run the project by typing `npm run start` from the command line.
 
 ## Authors
 
