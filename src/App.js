@@ -1,5 +1,6 @@
 import React from 'react';
-import Calculator from './components/calculator';
+import { Outlet } from 'react-router-dom';
+import Navbar from './components/navBar';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,7 +11,8 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Calculator />
+        <Navbar />
+        <Outlet />
       </div>
     );
   }
