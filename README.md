@@ -12,6 +12,9 @@
 
 In this project are creating a SPA using React
 
+## Live Demo
+
+Check it out @ [Heroku](https://spa-math-magicians.herokuapp.com/quote)
 ## Installation
 
 1 - Clone the repository
