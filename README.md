@@ -12,6 +12,10 @@
 
 In this project are creating a SPA using React
 
+## Live Demo
+
+Check it out @ [Heroku](https://spa-math-magicians.herokuapp.com/quote) or @ [Netlify](https://effulgent-rabanadas-191292.netlify.app/quote)
+
 ## Installation
 
 1 - Clone the repository
