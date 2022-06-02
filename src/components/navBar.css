@@ -28,3 +28,13 @@ li:hover {
 li:active {
   text-decoration: underline;
 }
+
+@media only screen and (max-width: 768px) {
+  .header {
+    position: fixed;
+    width: 390px;
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
