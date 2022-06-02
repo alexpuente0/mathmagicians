@@ -1,9 +1,8 @@
 .quote {
   color: var(--light-gray);
   text-align: center;
-  padding: 1rem;
+  padding: 200px 1rem;
   min-width: 300px;
-  height: calc(100vh - 2rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
