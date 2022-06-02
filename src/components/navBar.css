@@ -1,0 +1,40 @@
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  color: var(--white);
+  height: 80px;
+  background-color: var(--black);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 75px;
+  gap: 55vw;
+}
+
+.nav {
+  color: var(--white);
+  display: flex;
+  list-style-type: none;
+  flex-direction: row;
+  gap: 35px;
+}
+
+li:hover {
+  font-weight: bold;
+}
+
+li:active {
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    position: fixed;
+    width: 390px;
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

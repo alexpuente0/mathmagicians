@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React from 'react';
+import { Outlet, Route, Routes } from 'react-router-dom';
+import Navbar from './components/navBar';
+import Home from './pages/home';
+import Quote from './pages/quote';
+import Calculator from './components/calculator';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Navbar />
+        <Outlet />
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/Calculator" element={<Calculator />} />
+          <Route path="/quote" element={<Quote />} />
+        </Routes>
+      </div>
+    );
+  }
 }
 
 export default App;
+
+//
