@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Renders correctly 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="header"
+  >
+    <a
+      href="/home"
+      id="logo"
+      onClick={[Function]}
+    >
+      Math Magicians
+    </a>
+    <ul
+      className="nav"
+    >
+      <li>
+        <a
+          href="/home"
+          onClick={[Function]}
+        >
+          Home
+        </a>
+      </li>
+      <li>
+        <a
+          href="/calculator"
+          onClick={[Function]}
+        >
+          Calculator
+        </a>
+      </li>
+      <li>
+        <a
+          href="/quote"
+          onClick={[Function]}
+        >
+          Quote
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+`;
