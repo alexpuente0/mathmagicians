@@ -1,8 +1,7 @@
 .home {
-  padding: 1rem;
+  padding: 200px 1rem;
   margin-top: 2rem;
   min-width: 300px;
-  height: calc(100vh - 4rem);
   overflow: hidden;
   display: flex;
   flex-direction: column;
