@@ -14,7 +14,7 @@ In this project are creating a SPA using React
 
 ## Live Demo
 
-Check it out @ [Heroku](https://spa-math-magicians.herokuapp.com/home) or @ [Netlify](https://effulgent-rabanadas-191292.netlify.app/home)
+Check it out @ [Heroku](https://spa-math-magicians.herokuapp.com) or @ [Netlify](https://effulgent-rabanadas-191292.netlify.app)
 
 ## Installation
 
